@@ -1,0 +1,167 @@
+.rooms-features {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+
+  @include media-min ($lg) {
+    margin-bottom: 24px;
+  }
+
+  &--grid-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    @include media-min ($lg) {
+      gap: 12px;
+    }
+  }
+
+  &--grid-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    width: max-content;
+    gap: 10px;
+  }
+
+  &--flex-column {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &--hidden {
+    @include media-min ($lg) {
+      display: none;
+    }
+  }
+
+  &--booking {
+    flex-direction: column;
+    gap: 7px;
+
+    @include media-min ($lg) {
+      gap: 34px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--main-text);
+
+    @include media-min ($lg) {
+      font-size: 16px;
+    }
+
+    &--small {
+      font-weight: 600;
+      font-size: 6px;
+
+      @include media-min ($lg) {
+        font-size: 9px;
+      }
+    }
+
+    &--bg {
+      --main-text: #4cc538;
+      background-color: #eaffe5;
+      border-radius: 2px;
+      padding: 4px 14px 4px 8px;
+      font-weight: 500;
+      font-size: 8px;
+      color: var(--main-text);
+
+      @include media-min ($lg) {
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 8px 20px 8px 12px;
+      }
+
+      &-gray {
+        --main-text: #1e1d1b;
+
+        background-color: #d9d9d9;
+        color: var(--main-text);
+      }
+    }
+
+    &--booking {
+      width: max-content;
+      font-weight: 600;
+      font-size: 12px;
+
+      @include media-min ($lg) {
+        font-size: 24px;
+        padding: 9px 49px 9px 31px;
+      }
+    }
+
+    &--cancel {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 12px;
+      color: #4cc538;
+
+      @include media-min ($lg) {
+        font-size: 24px;
+      }
+
+      & img {
+        @include media-min ($lg) {
+          width: 33px;
+          height: 30px;
+        }
+      }
+    }
+
+  }
+
+  &__icon {
+    margin-right: 6px;
+
+    @include media-min ($lg) {
+      margin-right: 12px;
+    }
+
+
+
+    &--person {
+      @include media-min ($lg) {
+        width: 23px;
+        height: 23px;
+      }
+
+    }
+
+    &--square {
+      margin-right: 4px;
+
+      @include media-min ($lg) {
+        width: 23px;
+        height: 21px;
+        margin-right: 6px;
+      }
+    }
+
+    &--wallet {
+      @include media-min ($lg) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--food {
+      @include media-min ($lg) {
+        width: 22px;
+        height: 21px;
+      }
+    }
+  }
+}

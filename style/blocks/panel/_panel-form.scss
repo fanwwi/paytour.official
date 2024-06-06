@@ -1,0 +1,93 @@
+.panel-form {
+  &__top {
+    margin-bottom: 36px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1e1d1b;
+    margin-bottom: 8px;
+
+    @include media-min ($md) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__input {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1e1d1b;
+    border-radius: 7px;
+    border: 1px solid #02409e;
+    padding: 12px 22px;
+
+    @include media-min ($md) {
+      font-size: 22px;
+      border-radius: 10px;
+      padding: 16px 34px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 24px;
+      border-radius: 12px;
+      padding: 20px 40px;
+    }
+  }
+
+  &__bottom {
+    text-align: end;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    background-color: #02409e;
+    border-radius: 8px;
+    padding: 10px 38px;
+
+    @include media-min ($md) {
+      font-size: 20px;
+      border-radius: 12px;
+      padding: 15px 64px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 24px;
+      padding: 20px 82px;
+    }
+
+    &--theme-light {
+      color: #02409e;
+      background-color: transparent;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include media-min ($xl) {
+        font-size: 24px;
+      }
+    }
+  }
+}

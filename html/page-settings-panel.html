@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Личный кабинет Настройки</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true"
+       id="site-top"></div>
+  <div class="site__container">
+    @include('html/header/header-auth-user.html')
+
+    <div class="site__content">
+      <div class="container">
+        <div class="site__content site__content--row">
+          @include('html/common/sidebar.html')
+          <main class="site__content site__content--flex-grow">
+            @include('html/panel/page-settings/index.html')
+          </main>
+        </div>
+      </div>
+    </div>
+    @include('html/footer/index.html')
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

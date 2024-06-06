@@ -1,0 +1,426 @@
+.travel-blog {
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include media-min ($md) {
+      margin-bottom: 38px;
+    }
+
+    @include media-min ($lg) {
+      margin-bottom: 66px;
+    }
+
+    @include media-min ($xl) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__slider {
+    padding: 30px 8px 22px;
+    background: linear-gradient(137deg, #083e92 20.66%, #0b58c5 100%);
+    border-radius: 10px;
+
+    @include media-min ($md) {
+      padding: 50px 13px 0 50px;
+    }
+
+    @include media-min ($lg) {
+      background: none;
+      position: relative;
+      padding: 0;
+    }
+  }
+
+  &__bullets {
+    @include media-min ($md) {
+      margin-bottom: 33px;
+    }
+
+    @include media-min ($lg) {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      z-index: 2;
+    }
+  }
+
+  &__wrapper-bullet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+
+    @include media-min ($md) {
+      max-width: 420px;
+    }
+
+    @include media-min ($xl) {
+      max-width: 499px;
+    }
+
+  }
+
+  &__bullet {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #f5f5f5;
+    line-height: 1.1;
+    padding: 5px 12px 4px;
+    border: 0.63px solid #f5f5f5;
+    border-radius: 4px;
+    margin-right: 9px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+
+
+    @include media-min ($md) {
+      padding: 5px 23px;
+      font-size: 16px;
+
+      &:nth-child(n+3) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-min ($lg) {
+      &:nth-child(3) {
+        margin-left: 13px;
+      }
+    }
+
+    @include media-min ($xl) {
+      font-size: 20px;
+      padding: 5.5px 24px;
+    }
+  }
+
+  &__bullet-active {
+    background-color: var(--white);
+    color: #083E92;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+
+    @include media-min ($md) {
+      width: 59px;
+      left: 0;
+      transform: none;
+      top: auto;
+      bottom: 30px;
+    }
+
+    @include media-min ($lg) {
+      width: calc(453px - 30px);
+      left: 15px;
+      top: 50%;
+      transform: none;
+      transform: translateY(-50%);
+      bottom: auto;
+    }
+
+    @include media-min ($xl) {
+      width: calc(541px - 34px);
+      left: 17px;
+    }
+  }
+
+  &__button-next,
+  &__button-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.84px solid #f5f5f5;
+    top: 105px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.943897 7.47581C0.61693 7.14885 0.61693 6.61873 0.943897 6.29176L6.27212 0.96354C6.59909 0.636573 7.1292 0.636573 7.45617 0.96354C7.78314 1.29051 7.78314 1.82062 7.45617 2.14759L2.71997 6.88379L7.45617 11.62C7.78314 11.947 7.78314 12.4771 7.45617 12.804C7.1292 13.131 6.59909 13.131 6.27212 12.804L0.943897 7.47581ZM2.3725 7.72104H1.53592L1.53592 6.04654H2.3725V7.72104Z' fill='white'/%3E%3C/svg%3E%0A");
+      width: 8px;
+      height: 14px;
+      position: absolute;
+    }
+
+    --swiper-navigation-size: 12px;
+    --swiper-navigation-color: #F5F5F5;
+
+  }
+
+  &__button-next {
+    transform: rotate(180deg);
+
+    &::after {
+      left: 6px;
+    }
+  }
+
+  &__button-prev {
+
+    &::after {
+      left: 7px;
+    }
+  }
+
+  &__wrapper {}
+
+  &__swiper {
+    padding-top: 18px;
+    position: relative;
+    padding-bottom: 30px;
+
+    @include media-min ($md) {
+      padding-top: 0;
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+
+    &.active {}
+
+    @include media-min ($md) {
+      flex-direction: row-reverse;
+    }
+
+    @include media-min ($lg) {
+      flex-direction: row;
+
+    }
+  }
+
+  &__top {
+    position: relative;
+    border-radius: 13px;
+    overflow: hidden;
+    height: 192px;
+    object-fit: cover;
+    margin-bottom: 22px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--black);
+      opacity: 0.6;
+    }
+
+    @include media-min ($md) {
+      min-height: 256px;
+      width: 199px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      margin-left: 16px;
+      position: relative;
+      top: -50px;
+    }
+
+    @include media-min ($lg) {
+      margin-left: 0;
+      width: 453px;
+      min-height: 453px;
+      margin-right: 25px;
+      top: 0;
+
+    }
+
+    @include media-min ($xl) {
+      width: 541px;
+      min-height: 514px;
+      margin-right: 30px;
+    }
+  }
+
+  &__slide-info {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include media-min ($md) {
+      display: none;
+    }
+
+    @include media-min ($lg) {
+      display: flex;
+    }
+  }
+
+  &__slide-title {
+    font-size: 20px;
+    color: #f5f5f5;
+    margin: 0;
+
+    &--bottom {
+      display: none;
+
+      @include media-min ($md) {
+        display: block;
+      }
+    }
+
+    @include media-min ($md) {
+      font-size: 32px;
+    }
+
+    @include media-min ($lg) {
+      font-size: 40px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 44px;
+    }
+  }
+
+  &__slide-text {
+    font-weight: 700;
+    font-size: 14px;
+    color: #f5f5f5;
+
+    @include media-min ($lg) {
+      font-size: 16px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 20px;
+    }
+  }
+
+
+
+  &__bottom {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+
+    @include media-min ($lg) {
+      background: linear-gradient(137deg, #083e92 20.66%, #0b58c5 100%);
+      border-radius: 11px;
+      padding: 140px 15px 0 24px;
+      height: inherit;
+    }
+
+    @include media-min ($xl) {
+      padding: 166px 18px 0 29px;
+    }
+  }
+
+
+
+  &__bottom-text {
+    position: relative;
+    padding-top: 18px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #f5f5f5;
+
+    & p {
+      margin: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--white);
+      }
+    }
+
+    @include media-min ($md) {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @include media-min ($lg) {
+      font-size: 15px;
+      margin-top: 9px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 14px;
+    pointer-events: auto;
+    font-weight: 600;
+    font-size: 14px;
+
+    @include media-min ($md) {
+      font-size: 16px;
+    }
+
+    @include media-min ($xl) {
+      font-size: 20px;
+    }
+  }
+
+  &__btn-icon {
+    width: 33px;
+    height: 33px;
+    background-color: #003B95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 11px;
+  }
+}
+
+.slider {
+  &__append-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__link {
+      font-weight: 500;
+      font-size: 14px;
+      padding: 4px 12px;
+      border: 0.63px solid #f5f5f5;
+      border-radius: 4px;
+      margin-right: 9px;
+      margin-bottom: 10px;
+    }
+  }
+}

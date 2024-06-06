@@ -1,0 +1,108 @@
+.panel {
+  color: #1e1d1b;
+  margin-top: 39px;
+
+
+  @include media-min ($md) {
+    margin-top: 81px;
+  }
+
+  @include media-min ($lg) {
+    margin: 64px 0 0 41px;
+  }
+
+  @include media-min ($xl) {
+    margin: 65px 0 0 65px;
+  }
+
+  &__title {
+    color: #1e1d1b;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: '';
+      width: 44px;
+      height: 4px;
+      border-radius: 10px;
+      background-color: #003b95;
+
+      @include media-min ($md) {
+        width: 68px;
+        height: 6px;
+      }
+
+      @include media-min ($lg) {}
+
+      @include media-min ($xl) {
+        bottom: -5px;
+        width: 82px;
+      }
+    }
+
+    &--line-big {
+      &::after {
+        @include media-min ($md) {
+          width: 131px;
+        }
+
+        @include media-min ($lg) {
+          width: 139;
+        }
+
+        @include media-min ($xl) {
+          width: 141px;
+        }
+
+      }
+    }
+
+  }
+
+  &__info {
+    & p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 14px;
+      color: #1e1d1b;
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include media-min ($md) {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      @include media-min ($xl) {
+        font-size: 24px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include media-min ($md) {
+      max-width: 480px;
+    }
+
+    @include media-min ($xl) {
+      max-width: 544px;
+    }
+
+    &--width-max {
+      @include media-min ($xl) {
+        max-width: 644px;
+      }
+    }
+  }
+
+  &__item {
+    max-width: 540px;
+  }
+}

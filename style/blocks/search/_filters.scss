@@ -1,0 +1,205 @@
+.filters {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 19px 12px 90px;
+    box-shadow: 16px 12px 15px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    @include media-min ($lg) {
+      padding: 58px 0 150px 28px;
+      box-shadow: none;
+      gap: 78px;
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #003b95;
+    margin-bottom: 20px;
+  }
+
+}
+
+.filters-group {
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__info-item {
+    font-weight: 500;
+    font-size: 20px;
+    color: #1e1d1b;
+
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & svg {
+      margin-right: 22px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+
+    color: #1e1d1b;
+    margin-bottom: 20px;
+
+    @include media-min ($lg) {
+      font-size: 20px;
+      margin-bottom: 26px;
+    }
+
+    & span {
+      color: #003b95;
+    }
+
+  }
+
+  &__descr {
+    margin-top: 16px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e1d1b;
+    margin-bottom: 16px;
+
+    @include media-min ($lg) {
+      font-size: 18px;
+    }
+  }
+
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  &__stars-rating {
+    width: calc(21 * 5);
+    height: 21px;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8571 0.973877L17.1137 10.9966H27.6523L19.1264 17.191L22.383 27.2138L13.8571 21.0194L5.33126 27.2138L8.58785 17.191L0.0619793 10.9966H10.6005L13.8571 0.973877Z' fill=''/%3E%3C/svg%3E%0A");
+    background-repeat: repeat-x;
+    background-size: 21px 21px;
+    margin-right: 8px;
+  }
+
+  &__item-star {
+    display: block;
+    width: calc(21px * var(--star-rating, 0));
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8571 0.973877L17.1137 10.9966H27.6523L19.1264 17.191L22.383 27.2138L13.8571 21.0194L5.33126 27.2138L8.58785 17.191L0.0619793 10.9966H10.6005L13.8571 0.973877Z' fill='%23083E92'/%3E%3C/svg%3E%0A");
+    background-repeat: repeat-x;
+    background-size: 21px 21px;
+
+  }
+}
+
+.filters-view-toggle {
+  margin-bottom: 46px;
+  background-image: url('../img/img-bg_filters-view-toggle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 36px 20px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #003b95;
+      border-radius: 4px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    color: #1e1d1b;
+    padding-bottom: 8px;
+
+    &.active {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 6px;
+        background-color: #003b95;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.filters-favorite {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e1d1b;
+
+  & svg {
+    margin-right: 22px;
+  }
+
+  @include media-min ($lg) {
+    font-size: 20px;
+  }
+}
+
+.filters-select {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  background-color: #003b95;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+
+  @include media-min ($lg) {
+    font-size: 16px;
+  }
+
+}
+
+.filters-input {
+  border: 1px solid #003b95;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #003b95;
+  padding: 12px 24px;
+}
