@@ -4671,14 +4671,14 @@ strong {
     display: block;
   }
 }
-.detailed-gallery__item img {
+.detailed-gallery__item > img {
   width: 100%;
   height: 100%;
 
   border-radius: 6px;
 }
 @media (min-width: 992px) {
-  .detailed-gallery__item img {
+  .detailed-gallery__item > img {
     border-radius: 12px;
   }
 }
@@ -4695,26 +4695,24 @@ strong {
 
   border: 1px solid #003b95;
   border-radius: 6px;
+
+  gap: 8px;
 }
 @media (min-width: 992px) {
   .detailed-gallery__btn {
     font-size: 20px;
 
     border-radius: 12px;
+
+    gap: 20px;
   }
-}
-.detailed-gallery__btn-icon {
-  margin-left: 8px;
 }
 @media (min-width: 992px) {
-  .detailed-gallery__btn-icon {
+  .detailed-gallery__btn svg,
+  .detailed-gallery__btn img {
     width: 9px;
     height: 16px;
-    margin-left: 20px;
   }
-}
-.detailed-gallery__btn-icon path {
-  fill: currentColor;
 }
 
 .contacts {
@@ -4804,19 +4802,22 @@ strong {
   }
 }
 @media (min-width: 992px) {
-  .contact__icon-mark {
+  .contact__icon--mark svg,
+  .contact__icon--mark img {
     width: 28px;
     height: 36px;
   }
 }
 @media (min-width: 992px) {
-  .contact__icon-phone {
+  .contact__icon--phone svg,
+  .contact__icon--phone img {
     width: 33px;
     height: 40px;
   }
 }
 @media (min-width: 992px) {
-  .contact__icon-mail {
+  .contact__icon--mail svg,
+  .contact__icon--mail img {
     width: 44px;
     height: 30px;
   }
@@ -6106,10 +6107,6 @@ strong {
   }
 }
 .panel__btn--gradient {
-  width: 100%;
-
-  font-weight: 600;
-
   background: linear-gradient(178deg, #083e92 9.56%, #0b58c5 100%);
 }
 
@@ -8265,12 +8262,15 @@ input[type=number]::-webkit-inner-spin-button {
 
   background-color: #003b95;
   border-radius: 6px;
+
+  gap: 20px;
 }
 @media (min-width: 992px) {
   .map__btn {
     display: flex;
   }
 }
-.map__btn-icon {
-  margin-right: 20px;
+.map__btn--rollup img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }

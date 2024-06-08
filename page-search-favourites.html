@@ -33,29 +33,29 @@
             <a class="header__notify" href="#">
               <img src="./img/icon-notify.svg" aria-hidden="true" width="22" height="25">
             </a>
-            <a class="header__chosen" href="#">
+            <a class="header__chosen" href="./page-no-favorites-panel.html">
               <img src="./img/icon-chosen.svg" aria-hidden="true" width="25" height="25">
             </a>
-            <a class="header__login header-auth-user__logout" href="/page-login.html">ВЫЙТИ</a>
-            <div class="header-auth-user__user-icon" href="/page-login.html">
+            <a class="header__login header-auth-user__logout" href="./page-login.html">ВЫЙТИ</a>
+            <div class="header-auth-user__user-icon" href="./page-login.html">
               <img src="./img/user-icon.jpg" alt="Фото пользователя">
             </div>
           </div>
           <div class="burger">
             <button class="btn-reset burger__btn" aria-label="Меню">
               <svg width="28" height="18" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-burger"></use>
+                <use xlink:href="./img/sprite.svg#icon-burger"></use>
               </svg>
             </button>
-            <div id="dropdown" class="burger__dropdown">
+            <div id="dropdown" class="burger__dropdown d-block">
               <div class="burger__dropdown-bg">
                 <nav>
                   <div class="burger__dropdown-links">
-                    <a href="/tour/page-no-bookings-panel.html">Личный кабинет</a>
+                    <a href="./page-no-bookings-panel.html">Личный кабинет</a>
                     <a href="#travel-blog">Блог о путешествиях</a>
                     <a href="#main-info">Преимущества TourPay</a>
                     <a href="#">Чат с поддержкой</a>
-                    <a href="/tour/page-no-favorites-panel.html">Мои избранные отели</a>
+                    <a href="./page-no-favorites-panel.html">Мои избранные отели</a>
                   </div>
                 </nav>
               </div>
@@ -77,7 +77,7 @@
               <a href="#" class="breadcrumbs__link">Гостиницы России</a>
             </li>
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Гостиницы Омска</a>
+              <a href="./page-search.html" class="breadcrumbs__link">Гостиницы Омска</a>
             </li>
           </ul>
         </div>
@@ -91,18 +91,18 @@
               <div class="page-search__search">
                 <label class="page-search__label">
                   <svg width="16" height="16" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                    <use xlink:href="./img/sprite.svg#icon-search"></use>
                   </svg>
                   <input class="page-search__input" type="text" placeholder="Поиск по названию отеля">
                 </label>
                 <button class="btn-reset page-search__btn page-search__btn--filters">
                   <svg width="22" height="18" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-map-settings"></use>
+                    <use xlink:href="./img/sprite.svg#icon-map-settings"></use>
                   </svg>
                 </button>
                 <button class="btn-reset page-search__btn page-search__btn--map">
                   <svg width="20" height="24" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                    <use xlink:href="./img/sprite.svg#icon-map"></use>
                   </svg>
                 </button>
               </div>
@@ -117,8 +117,8 @@
                     <div class="filters-group__row">
                       <div class="filters-group__info-item">1 номер для 2 гостей</div>
                       <a href="#">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18.5727 18.5904L24.5 24.5M21.0833 12.5417C21.0833 17.2591 17.2591 21.0833 12.5417 21.0833C7.82423 21.0833 4 17.2591 4 12.5417C4 7.82423 7.82423 4 12.5417 4C17.2591 4 21.0833 7.82423 21.0833 12.5417Z" stroke="#003B95" stroke-width="2.27778" stroke-linecap="round" stroke-linejoin="round" />
+                        <svg width="24" height="24" aria-hidden="true">
+                          <use xlink:href="./img/sprite.svg#icon-search"></use>
                         </svg>
                       </a>
                     </div>
@@ -139,7 +139,7 @@
                   </div>
 
                   <div class="filters-favorite">
-                    <a class="filters-favorite__link active" href="/tour/page-search-favourites.html">
+                    <a class="filters-favorite__link active" href="./page-search-favourites.html">
                       <img src="./img/icon_favourites-heart-blue.svg" aria-hidden="true" width="24" height="24">
                       Избранное</a>
                   </div>
@@ -644,17 +644,17 @@
 
                   <button class="btn-reset map__group-btn">
                     <svg width="31" height="31" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-ruler"></use>
+                      <use xlink:href="./img/sprite.svg#icon-ruler"></use>
                     </svg>
                   </button>
                   <button class="btn-reset map__group-btn">
                     <svg width="24" height="24" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      <use xlink:href="./img/sprite.svg#icon-heart"></use>
                     </svg>
                   </button>
                   <label class="map__label d-none d-sm-none d-lg-flex">
                     <svg width="15" height="15" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-search"></use>
+                      <use xlink:href="./img/sprite.svg#icon-search"></use>
                     </svg>
                     <input class="map__input" type="text" placeholder="Конкретное место">
                   </label>
@@ -665,15 +665,11 @@
                 </div>
 
                 <button class="btn-reset map__btn map__btn--unwrap">
-                  <svg class="map__btn-icon" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="white" />
-                  </svg>
+                  <img src="./img/icon_arrow-btn-map.svg" aria-hidden="true" width="9" height="16">
                   Развернуть</button>
 
                 <button class="btn-reset map__btn map__btn--rollup d-none">
-                  <svg class="map__btn-icon" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.292893 8.70711C-0.097631 8.31658 -0.097631 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM2 9H1L1 7H2L2 9Z" fill="white" />
-                  </svg>
+                  <img src="./img/icon_arrow-btn-map.svg" aria-hidden="true" width="9" height="16">
                   Свернуть
                 </button>
               </div>
@@ -695,7 +691,6 @@
                             <span></span>
                           </div>
                         </div>
-
 
 
                         <div class="search-card__content">
@@ -760,7 +755,7 @@
                             </div>
                           </div>
                           <div class="search-card__buttons">
-                            <a class="search-card__btn" href="/page-detailed-hotel.html" class="">На страницу отеля</a>
+                            <a class="search-card__btn" href="./page-detailed-hotel.html" class="">На страницу отеля</a>
                           </div>
                         </div>
                       </div>
@@ -887,8 +882,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/vendor-bundle.js"></script>
-  <script src="js/main.js" type="module"></script>
+
 </body>
 
 </html>

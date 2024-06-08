@@ -48,24 +48,25 @@
 
           <div class="header-detailed__right">
             <div class="header-detailed__buttons">
-              <a class="header-detailed__link" href="#">ОТЗЫВЫ</a>
-              <a class="header-detailed__link header-detailed__link--btn" href="#">Забронировать</a>
+              <a class="header-detailed__link" href="#reviews">ОТЗЫВЫ</a>
+              <a class="header-detailed__link header-detailed__link--btn" href="./page-detailed-booking-room.html">Забронировать</a>
             </div>
             <div class="burger">
               <button class="btn-reset burger__btn" aria-label="Меню">
                 <svg width="28" height="18" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-burger"></use>
+                  <use xlink:href="./img/sprite.svg#icon-burger"></use>
                 </svg>
               </button>
-              <div id="dropdown" class="burger__dropdown">
+              <div id="dropdown" class="burger__dropdown d-block">
                 <div class="burger__dropdown-bg">
                   <nav>
                     <div class="burger__dropdown-links">
-                      <a href="/tour/page-no-bookings-panel.html">Личный кабинет</a>
-                      <a href="#travel-blog">Блог о путешествиях</a>
-                      <a href="#main-info">Преимущества TourPay</a>
-                      <a href="#">Чат с поддержкой</a>
-                      <a href="/tour/page-no-favorites-panel.html">Мои избранные отели</a>
+                      <a href="#hero-descr">Об отеле</a>
+                      <a href="#available-rooms">Номера</a>
+                      <a href="#contacts">Контакты</a>
+                      <a href="#gallery">Галерея</a>
+                      <a href="#reviews">Отзывы</a>
+                      <a href="./page-no-bookings-panel.html">Мои бронирования</a>
                     </div>
                   </nav>
                 </div>
@@ -86,14 +87,14 @@
               <a href="#" class="breadcrumbs__link">Гостиницы России</a>
             </li>
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Гостиницы Омска</a>
+              <a href="./page-search.html" class="breadcrumbs__link">Гостиницы Омска</a>
               <div class="breadcrumbs__date"><span>5 июн, ср - 16 июн, вс</span></div>
             </li>
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">VANVA (Ванва)</a>
+              <a href="./page-detailed-hotel.html" class="breadcrumbs__link">VANVA (Ванва)</a>
             </li>
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Бронирование</a>
+              <a href="./page-detailed-booking-room.html" class="breadcrumbs__link">Бронирование</a>
             </li>
           </ul>
         </div>
@@ -113,13 +114,13 @@
                   <ul class="list-reset rooms-features d-lg-none">
                     <li class="rooms-features__item">
                       <svg width="16" height="15" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-person"></use>
+                        <use xlink:href="./img/sprite.svg#icon-person"></use>
                       </svg>
                       2 взрослых
                     </li>
                     <li class="rooms-features__item rooms-features__item--small">
                       <svg width="16" height="15" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-square"></use>
+                        <use xlink:href="./img/sprite.svg#icon-square"></use>
                       </svg>
                       80 м<sup>2</sup>
                     </li>
@@ -127,7 +128,7 @@
                   <ul class="list-reset rooms-features">
                     <li class="rooms-features__item rooms-features__item--big">
                       <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-bed"></use>
+                        <use xlink:href="./img/sprite.svg#icon-bed"></use>
                       </svg>
                       Двуспальная кровать или отдельные кровати
                     </li>
@@ -141,7 +142,7 @@
                       <ul class="list-reset rooms-features rooms-features--bg rooms-features--booking">
                         <li class="rooms-features__item rooms-features__item--pay">
                           <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#icon-wallet"></use>
+                            <use xlink:href="./img/sprite.svg#icon-wallet"></use>
                           </svg>
                           Оплата сразу
                         </li>
@@ -216,7 +217,6 @@
             </div>
           </div>
         </section>
-
         <section class="detailed-gallery">
           <div class="container">
             <h2 class="detailed-gallery__title">Ваш номер изнутри</h2>
@@ -241,15 +241,12 @@
               </li>
               <li class="detailed-gallery__item detailed-gallery__item">
                 <button class="btn-reset detailed-gallery__btn">Смотреть все
-                  <svg class="detailed-gallery__btn-icon" width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.39956 4.71245C4.58377 4.52824 4.58377 4.22957 4.39956 4.04537L1.39769 1.0435C1.21348 0.859288 0.914821 0.859288 0.730612 1.0435C0.546402 1.22771 0.546402 1.52637 0.730612 1.71058L3.39894 4.37891L0.730612 7.04723C0.546402 7.23144 0.546402 7.53011 0.730612 7.71432C0.914821 7.89852 1.21348 7.89852 1.39769 7.71432L4.39956 4.71245ZM3.83008 4.8506H4.06602V3.90721H3.83008V4.8506Z" fill="none" />
-                  </svg>
+                  <img src="./img/icon_arrow-btn-gallery.svg" aria-hidden="true" width="5" height="8">
                 </button>
               </li>
             </ul>
           </div>
         </section>
-
         <section class="detailed-benefits">
           <div class="container">
             <h2 class="detailed-benefits__title detailed-benefits__title--case">
@@ -625,8 +622,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/vendor-bundle.js"></script>
-  <script src="js/main.js" type="module"></script>
+
 </body>
 
 </html>
