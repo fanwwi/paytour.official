@@ -2148,22 +2148,34 @@ strong {
 }
 .main-hero__background-img {
   padding-top: 237px;
+  background-image: url(../img/tour1.jpg);
+  background-size: cover;
+  animation: slide 20s infinite;
+  background-position: center;
+  height: 700px;
 }
-@media (min-width: 768px) {
-  .main-hero__background-img {
-    padding-top: 460px;
+
+@keyframes slide {
+  0% {
+    background-image: url(../img/tour1.jpg);
+  }
+  25% {
+    background-image: url(../img/tour2.jpg);
+  }
+  50% {
+    background-image: url(../img/tour3.jpg);
+  }
+  75% {
+    background-image: url(../img/tour4.png);
+  }
+  90% {
+    background-image: url(../img/tour5.png);
+  }
+  100% {
+    background-image: url(../img//tour1.jpg);
   }
 }
-@media (min-width: 992px) {
-  .main-hero__background-img {
-    padding-top: 520px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-hero__background-img {
-    padding-top: 690px;
-  }
-}
+
 .main-hero__background-img > img,
 .main-hero__background-img .main-hero__background-color {
   position: absolute;
@@ -2524,7 +2536,7 @@ strong {
     font-size: 24px;
   }
 }
-.info-payment__text { 
+.info-payment__text {
   font-size: 11px;
 }
 @media (min-width: 992px) {
@@ -2540,7 +2552,7 @@ strong {
 .info-payment__btn {
   position: absolute;
   top: 0;
-  right: -6px;  
+  right: -6px;
   display: flex;
   justify-content: center;
   align-items: center;
