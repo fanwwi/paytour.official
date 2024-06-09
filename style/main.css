@@ -145,7 +145,6 @@ input[type="checkbox"].visually-hidden {
 .list-reset {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -2358,14 +2357,13 @@ strong {
   align-items: center;
   padding: 40px;
   text-align: center;
-  background-color: #0021ff;
   grid-column-end: 3;
   grid-column-start: 1;
 }
 @media (min-width: 768px) {
   .info-cooperate__img {
-    -webkit-mask-image: url(../img/mask.png);
-    mask-image: url(../img/mask.png);
+    -webkit-mask-image: url(../img/hotel.png);
+    mask-image: url(../img/hotel.png);
     -webkit-mask-position: center;
     mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -2526,7 +2524,7 @@ strong {
     font-size: 24px;
   }
 }
-.info-payment__text {
+.info-payment__text { 
   font-size: 11px;
 }
 @media (min-width: 992px) {
@@ -2542,14 +2540,12 @@ strong {
 .info-payment__btn {
   position: absolute;
   top: 0;
-  right: -6px;
-
+  right: -6px;  
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
-
   background-color: #0021ff;
   border-radius: 50%;
 }
@@ -5697,7 +5693,6 @@ strong {
 }
 .auth__list {
   display: grid;
-
   gap: 26px;
   grid-auto-rows: 70px;
   grid-template-columns: repeat(3, 70px);
@@ -5714,7 +5709,6 @@ strong {
   justify-content: center;
   align-items: center;
   padding: 10px 10px;
-
   border: 1px solid #0021ff;
   border-radius: 10px;
 }
